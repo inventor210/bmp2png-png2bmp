@@ -1,0 +1,89 @@
+bmp2png / png2bmp version 1.63 - Feb 03, 2012
+---------------------------------------------
+
+bmp2png/png2bmp is a pair of simple command-line utilities that convert
+between Windows BMP format and PNG (Portable Network Graphics).
+
+This software is freeware.
+
+
+Using them
+----------
+
+The basic command line is:
+
+   bmp2png [-options] list of bmp files ...
+   png2bmp [-options] list of png files ...
+
+The input files are not modified; the output data is written to files
+which have the same names except for extension. bmp2png always uses
+".png" for the output file name's extension; png2bmp uses ".bmp".
+
+To list the options, simply type "bmp2png" or "png2bmp" with no
+arguments.
+
+
+Copyright notice, and license
+-----------------------------
+
+bmp2png --- conversion from (Windows or OS/2 style) BMP to PNG
+png2bmp --- conversion from PNG to (Windows style) BMP
+
+Copyright (C) 1999-2005 MIYASAKA Masaru <alkaid@coral.ocn.ne.jp>
+
+Permission to use, copy, modify, and distribute this software and
+its documentation for any purpose and without fee is hereby granted,
+provided that the above copyright notice appear in all copies and
+that both that copyright notice and this permission notice appear
+in supporting documentation. This software is provided "as is"
+without express or implied warranty.
+
+/*
+ *  Initially created by MIYASAKA Masaru. 
+ *
+ *  Modified by Beau Johnston on 03/02/12.
+ *  Copyright (C) 2012 Beau Johnston.
+ *
+ *  Please email me if you have any comments, suggestions or advice:
+ *                              beau@inbeta.org
+ *
+ *  Permission is hereby granted, free of charge, to any person obtaining a copy
+ *  of this software and associated documentation files (the "Software"), to deal
+ *  in the Software without restriction, including without limitation the rights
+ *  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ *  copies of the Software, and to permit persons to whom the Software is
+ *  furnished to do so, subject to the following conditions:
+ *
+ *  The above copyright notice and this permission notice shall be included in
+ *  all copies or substantial portions of the Software.
+ *
+ *  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ *  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ *  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ *  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ *  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ *  THE SOFTWARE.
+ */
+
+Major changes
+-------------
+
+version 1.60 [August 25, 2004]
+  bmp2png now can read all types of BMP file, including
+    16/32 bits/pixel BMP, bitfield BMP, and RLE-encoded BMP.
+  Added -P option to bmp2png, which allows to make one particular
+    color fully transparent.
+
+version 1.61 [September 4, 2004]
+  (executable) Fixed a file-corruption bug which was introduced
+    in libpng 1.2.6.
+  (source code) Added support for emx complier (not tested).
+
+version 1.62 [September 4, 2005]
+  Added alpha channel support. (Added -A, -B and -R options.)
+
+version 1.63 [February 3, 2012]
+  Modified Makefile to build on MacOSX darwin.
+
+[end]
