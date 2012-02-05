@@ -7,9 +7,9 @@
 
 UNAME := $(shell uname -s)
 
-ifndef BINDIR
-BINDIR  = /usr/local/bin
-endif
+#ifndef BINDIR
+#BINDIR  = /usr/local/bin
+#endif
 
 CC      = gcc
 LD      = gcc
@@ -43,10 +43,10 @@ png2bmp : $(P2BOBJ)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 install :
-	$(INSTALL) bmp2png png2bmp $(BINDIR)
+	$(INSTALL) bmp2png png2bmp $(DESTDIR)
 
 uninstall :
-	rm -f $(BINDIR)/bmp2png $(BINDIR)/png2bmp
+	rm -f $(DESTDIR)/bmp2png $(DESTDIR)/png2bmp
 
 clean :
 	rm -f $(B2POBJ) $(P2BOBJ) bmp2png png2bmp
