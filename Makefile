@@ -34,10 +34,10 @@ P2BOBJ  = png2bmp.o common.o
 all : bmp2png png2bmp
 
 bmp2png : $(B2POBJ)
-	$(LD) $(LDFLAGS) -o $(DESTDIR)/bmp2png $(B2POBJ) $(LIBS)
+	$(LD) $(LDFLAGS) -o bmp2png $(B2POBJ) $(LIBS)
 
 png2bmp : $(P2BOBJ)
-	$(LD) $(LDFLAGS) -o $(DESTDIR)/png2bmp $(P2BOBJ) $(LIBS)
+	$(LD) $(LDFLAGS) -o png2bmp $(P2BOBJ) $(LIBS)
 
 %.o : %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
